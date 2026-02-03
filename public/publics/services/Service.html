@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Perry Home Wound Care</title>
+  <link rel="stylesheet" href="../services/Service.css">
+  <meta name="description" content="Explore our in-home and virtual wound care services and book the right service for your needs." />
+  <style>
+    /* Page-specific tweaks (keeps using your main palette) */
+    .subhero{max-width:1200px;margin:24px auto 0;padding:0 16px 8px}
+    .subhero h1{margin:0 0 6px;font-size:clamp(26px,3.6vw,40px)}
+    .subhero p{margin:0;color:var(--muted)}
+    .toolbar{max-width:1200px;margin:12px auto;padding:0 16px 8px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .input, .select{height:40px;border:1px solid #e6eef6;border-radius:12px;padding:0 12px;background:#fff}
+    .input{flex:1;min-width:190px}
+    .select{min-width:180px}
+    .service-media{border-radius:14px;overflow:hidden;border:1px solid #e6eef6;aspect-ratio:16/9}
+    .service-media img{width:100%;height:100%;object-fit:cover}
+    .card .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .badge{font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid #dfeaf4;background:#fff;color:#0f4c5c}
+    .btn.block{width:100%;justify-content:center}
+    .grid.cols-3 .card{flex-direction:column}
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="navin">
+      <a class="brand" href="/"><span class="logo">PH</span><span class="brandname">Perry Home Wound Care</span></a>
+      <nav class="navlinks">
+        <a href="/" class="btn ghost">Home</a>
+        <a href="./Service.html" class="btn ghost">Services</a>
+        <a href="../booking/bookings.html" class="btn primary">Book a Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="subhero">
+    <h1>Our Services</h1>
+    <p>In-person and virtual wound care tailored to each patient. Choose a service to see details and book.</p>
+  </section>
+
+  <!-- Filters -->
+  <div class="toolbar" role="region" aria-label="Service filters">
+    <input id="q" class="input" type="search" placeholder="Search services (e.g., ostomy, diabetic, pressure)…" aria-label="Search services">
+    <select id="category" class="select" aria-label="Filter by category">
+      <option value="">All categories</option>
+      <option value="wound">Wound Management</option>
+      <option value="ostomy">Ostomy</option>
+      <option value="virtual">Tele-Wound</option>
+    </select>
+    <button id="clear" class="btn">Clear</button>
+  </div>
+
+  <!-- Services grid -->
+  <section class="wrap" id="services">
+    <div class="grid cols-3" id="serviceGrid" aria-live="polite"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="fgrid">
+      <div class="brandline"><span class="logo">PH</span><strong>Perry Home Wound Care</strong></div>
+      <nav><a href="/">Home</a> · <a href="#Services">Services</a> · <a href="../contact/contact.html">Contact</a></nav>
+      <div class="muted">Perry • Warner Robins • Houston County, GA</div>
+    </div>
+    <div class="muted small">&copy; <span id="yr"></span> Perry Home Wound Care</div>
+  </footer>
+
+  <script src="Service.js"></script>
+</body>
+</html>

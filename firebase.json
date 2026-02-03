@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "public",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "ignore": ["firebase.json","**/.*","**/node_modules/**","**/*.md"],
+    "rewrites": [
+      { "source": "/admin", "destination": "/admin/admin.html" },
+      { "source": "/login", "destination": "/admin/login/admin-login.html" },
+      { "source": "/admin/tasks",     "destination": "/admin/tasks.html" },
+      { "source": "/admin/bookings",  "destination": "/admin/bookings.html" },
+      { "source": "/admin/contacts",  "destination": "/admin/contacts.html" },
+      { "source": "/admin/referrals", "destination": "/admin/referrals.html" },
+      { "source": "/admin/users",     "destination": "/admin/users.html" }
+
+    ],
+    "headers": [
+      { "source": "**/*.@(css|js)", "headers":[{"key":"Cache-Control","value":"public, max-age=3600"}] },
+      { "source": "**/*.@(jpg|jpeg|gif|webp|svg|png)", "headers":[{"key":"Cache-Control","value":"public, max-age=86400"}] }
+    ]
+  },
+  "firestore": { "rules": "firestore.rules" }
+}
